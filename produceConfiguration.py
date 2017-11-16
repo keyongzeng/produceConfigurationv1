@@ -32,6 +32,8 @@ def replace_info(excel_name,bianliang_list):
     return all_data
 
 timefilename = time.strftime('%Y_%m_%d_%H%M')
+if not os.path.exists("configration_storehouse"):
+    os.mkdir("configration_storehouse")
 while True:
     project = input("请输入本次工程名：").strip()
     if len(project) == 0:
